@@ -70,13 +70,15 @@ const Header = () => {
                   }`
                 }
               >
-                <tab.icon aria-hidden="true" className="h-4 w-4 shrink-0" />
-                <span>{tab.label}</span>
-                {({ isActive }) =>
-                  isActive && (
-                    <span className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-indigo-500" />
-                  )
-                }
+                {({ isActive }) => (
+                  <>
+                    <tab.icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                    <span>{tab.label}</span>
+                    {isActive && (
+                      <span className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-indigo-500" />
+                    )}
+                  </>
+                )}
               </NavLink>
             ))}
 

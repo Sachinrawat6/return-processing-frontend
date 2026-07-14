@@ -176,7 +176,7 @@ export const downloadSessionCsv = async (id) => {
   } catch {
     throw new ApiRequestError('Could not reach the server. Is the backend running?', 0);
   }
-  await downloadCsvResponse(response, `ReturnLog-${id}.csv`);
+  await downloadCsvResponse(response, `BulkAcceptReturns&CreateCreditNotes.csv`);
 };
 
 export const fetchChannels = async () => {
